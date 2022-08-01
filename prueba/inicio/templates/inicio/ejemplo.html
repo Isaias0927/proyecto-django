@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-<title>Plantilla</title>
+<title>{%block titulo%}Plantilla{%endblock%}</title>
 
-{% load static %}
+{%load static%}
 <link href="{% static 'inicio/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
 <link href="{% static 'inicio/css/londinium-theme.css'%}" rel="stylesheet" type="text/css">
 <link href="{% static 'inicio/css/styles.css'%}" rel="stylesheet" type="text/css">
@@ -61,21 +61,18 @@
 			<div class="sidebar-content">
 				<!-- Menú de navegación -->
 				<ul class="navigation">
-							<li><a href="url principal.html">Principal</a></li>
-							<li><a href="url formulario.html">Registro</a></li>	
-							<li><a href="url contacto.html">Contacto</a></li>		
+							<li><a href="{%url 'principal'%}">Principal</a></li>
+							<li><a href="{%url 'formulario'%}">Registro</a></li>		
+                            <li><a href="{%url 'contacto' %}">Contacto</a></li>
 				</ul>
 				<!-- /Fin menú -->
 			</div>
 		</div>
 		<!-- /sidebar -->
-	</div>
-<!--CONTENIDO-->
-{% block contenido %} <!--Template Tag-->
-<!--block sirve para indicar que colocaremos un bloque de contenido 
-a traves de nuestra variable content-->
-{% endblock %}
-		
 
+
+    {% block contenido %} {% endblock %}
+
+		</div>
 </body>
 </html>

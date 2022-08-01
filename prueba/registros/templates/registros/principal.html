@@ -11,7 +11,7 @@
 </div>
 
 {% endblock %} {% block contenido %}
-<table class="table table-bordered table-striped">
+<table class="text-center table table-bordered table-striped">
     <thead>
         <tr>
             <th>Foto</th>
@@ -19,22 +19,24 @@
             <th>Nombre</th>
             <th>Carrera</th>
             <th>Turno</th>
-            <th>Editar</th>
-            <th>Eliminar</th>
+            <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
+        {% for alumno in alumnos %}
         <tr>
-            <td class="text-center">
-                <img src="{{ imagen }}" class="img-circle" alt="Image" width="50px">
+            <td><img src="{{ alumno.imagen.url }}" width="50" height="50"></td>
+            <td class="text-semibold">{{alumno.matricula}}</td>
+            <td class="muted">{{alumno.nombre}}</td>
+            <td class="muted">{{alumno.carrera}}</td>
+            <td class="muted">{{alumno.turno}}</td>
+
+            <td class="text-center"><a href="{%url 'ConsultarIndividualAlumno' alumno.id %}">Editar</a></td>
+            <td class="text-center"><a href="{%url 'EliminarAlumno' alumno.id %}">Eliminar</a></td>
+
             </td>
-            <td class="text-semibold">UTM190020TI</td>
-            <td class="muted">Joseph Valencia</td>
-            <td class="muted">Ingenieria en Sistemas</td>
-            <td class="muted">Matutino</td>
-            <td class=""></td>
-            <td></td>
-        </tr>
+            {% endfor %}
     </tbody>
 
 </table>

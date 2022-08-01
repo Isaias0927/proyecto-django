@@ -16,10 +16,39 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from inicio import views
+from django.conf import settings
+from registros import views as views_registros
 
 urlpatterns = [
+    #path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot' )),
     path('admin/', admin.site.urls),
-    path('',views.principal,name="Principal"),
-    path('contacto/',views.contacto,name="Contacto"),
-    path('contacto/',views.contacto,name="Formulario"),
+    path('',views_registros.registros ,name='Principal'),
+    path('formulario/',views.formulario,name='Formulario'),
+    path('contacto/',views_registros.contacto, name='Contacto'),
+    path('ejemplo/',views.ejemplo,name='ejemplo'),
+    path('registrar/', views_registros.registrar, name='Registrar'),
+    path('comentarios/', views_registros.coment, name='Comentario'),
+    path('eliminarComentario/<int:id>/', views_registros.eliminarComentarioContacto, name='Eliminar'),
+    path('formEditarComentario/<int:id>/', views_registros.consultarComentario, name='ConsultarIndividual'),
+    path('editarComentario/<int:id>/', views_registros.editarComentario, name='Editar'),
+    # Alumnos
+    path('registroAlumno/', views_registros.registroAlumnos, name='RegistrarAlumno'),
+    path('eliminarAlumno/<int:id>/', views_registros.eliminarAlumno, name='EliminarAlumno'),
+    path('formEditarAlumno/<int:id>/', views_registros.consultarAlumno, name='ConsultarIndividualAlumno'),
+    path('editarAlumno/<int:id>/', views_registros.editarAlumno, name='EditarA'),
+    path('consultas1/', views_registros.consultar1, name='Consultas'),
+    path('consultas2/', views_registros.consultar2, name='Consultas2'),
+    path('consultas3/', views_registros.consultar3, name='Consultas3'),
+    path('consultas4/', views_registros.consultar4, name='Consultas4'),
+    path('consultas5/', views_registros.consultar5, name='Consultas5'),
+    path('consultas6/', views_registros.consultar6, name='Consultas6'),
+    path('consultas7/', views_registros.consultar7, name='Consultas7'),
+    path('subir/', views_registros.archivos, name='Subir'),
+    path('consultasSQL/', views_registros.consultasSQL, name='sql'),
+    path('seguridad/', views_registros.seguridad, name='Seguridad'),
 ]
+
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
