@@ -95,13 +95,13 @@
 
                 <ul class="breadcrumb">
 
-                    <a href="{%url 'Principal'%}">
+                <a href="{%url 'Principal'%}">
                     {% if request.path == '/'  %}
                     Principal
                     {% else %}
                     Principal{{request.path}}
                     {% endif %}
-                </a> {{request.path}}
+                </a> 
                 </ul>
 
             </div>

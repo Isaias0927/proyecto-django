@@ -20,7 +20,6 @@ from django.conf import settings
 from registros import views as views_registros
 
 urlpatterns = [
-    #path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot' )),
     path('admin/', admin.site.urls),
     path('',views_registros.registros ,name='Principal'),
     path('formulario/',views.formulario,name='Formulario'),
@@ -45,6 +44,7 @@ urlpatterns = [
     path('consultas7/', views_registros.consultar7, name='Consultas7'),
     path('subir/', views_registros.archivos, name='Subir'),
     path('consultasSQL/', views_registros.consultasSQL, name='sql'),
+
     path('seguridad/', views_registros.seguridad, name='Seguridad'),
 ]
 
