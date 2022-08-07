@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-08-2022 a las 14:32:55
+-- Tiempo de generación: 07-08-2022 a las 21:16:36
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -57,6 +57,52 @@ CREATE TABLE `auth_permission` (
   `codename` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `auth_permission`
+--
+
+INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALUES
+(1, 'Can add log entry', 1, 'add_logentry'),
+(2, 'Can change log entry', 1, 'change_logentry'),
+(3, 'Can delete log entry', 1, 'delete_logentry'),
+(4, 'Can view log entry', 1, 'view_logentry'),
+(5, 'Can add permission', 2, 'add_permission'),
+(6, 'Can change permission', 2, 'change_permission'),
+(7, 'Can delete permission', 2, 'delete_permission'),
+(8, 'Can view permission', 2, 'view_permission'),
+(9, 'Can add group', 3, 'add_group'),
+(10, 'Can change group', 3, 'change_group'),
+(11, 'Can delete group', 3, 'delete_group'),
+(12, 'Can view group', 3, 'view_group'),
+(13, 'Can add user', 4, 'add_user'),
+(14, 'Can change user', 4, 'change_user'),
+(15, 'Can delete user', 4, 'delete_user'),
+(16, 'Can view user', 4, 'view_user'),
+(17, 'Can add content type', 5, 'add_contenttype'),
+(18, 'Can change content type', 5, 'change_contenttype'),
+(19, 'Can delete content type', 5, 'delete_contenttype'),
+(20, 'Can view content type', 5, 'view_contenttype'),
+(21, 'Can add Alumno', 6, 'add_alumnos'),
+(22, 'Can change Alumno', 6, 'change_alumnos'),
+(23, 'Can delete Alumno', 6, 'delete_alumnos'),
+(24, 'Can view Alumno', 6, 'view_alumnos'),
+(25, 'Can add Comentario', 7, 'add_comentario'),
+(26, 'Can change Comentario', 7, 'change_comentario'),
+(27, 'Can delete Comentario', 7, 'delete_comentario'),
+(28, 'Can view Comentario', 7, 'view_comentario'),
+(29, 'Can add Comentario Contacto', 8, 'add_comentariocontacto'),
+(30, 'Can change Comentario Contacto', 8, 'change_comentariocontacto'),
+(31, 'Can delete Comentario Contacto', 8, 'delete_comentariocontacto'),
+(32, 'Can view Comentario Contacto', 8, 'view_comentariocontacto'),
+(33, 'Can add Archivo', 9, 'add_archivos'),
+(34, 'Can change Archivo', 9, 'change_archivos'),
+(35, 'Can delete Archivo', 9, 'delete_archivos'),
+(36, 'Can view Archivo', 9, 'view_archivos'),
+(37, 'Can add session', 10, 'add_session'),
+(38, 'Can change session', 10, 'change_session'),
+(39, 'Can delete session', 10, 'delete_session'),
+(40, 'Can view session', 10, 'view_session');
+
 -- --------------------------------------------------------
 
 --
@@ -82,11 +128,8 @@ CREATE TABLE `auth_user` (
 --
 
 INSERT INTO `auth_user` (`id`, `password`, `last_login`, `is_superuser`, `username`, `first_name`, `last_name`, `email`, `is_staff`, `is_active`, `date_joined`) VALUES
-(1, 'pbkdf2_sha256$320000$4SrWCH7IGdae8Pt4sFzLXd$VBKMR0VD+JNmQFPFzaEdSnDIqJ6xCrKGzQ2HmLtdjFY=', NULL, 1, 'isaias-prueba', '', '', 'ih0936742@gmail.com', 1, 1, '2022-08-01 08:26:20.596136'),
-(2, 'pbkdf2_sha256$320000$Jwf2vPEnHWZ87qixIZvIJA$MwZVCeuiwO6g84bXhrX8erQh/VrH+Pi5Z2hz+fr7fpk=', NULL, 1, 'isaias.28', '', '', 'ih0936742c@gmail.com', 1, 1, '2022-08-01 08:27:37.414309'),
-(3, 'pbkdf2_sha256$320000$SaHVC7gf2tB56GCuzX5eR7$S7Rlru5pf381F9+JV823N1VaMtlGrIRtlY57qEyhRBw=', NULL, 1, 'isaias-28', '', '', 'isaias@gmail.com', 1, 1, '2022-08-01 08:37:09.512108'),
-(4, 'pbkdf2_sha256$320000$mVaJueIgGUMeTqUBAAFmxZ$cNhTiOy7LWNf4xWn1IHrgIdnLykIVFgWooCyU4lRLxI=', NULL, 1, 'isaias28', '', '', 'isaias@gmail.com', 1, 1, '2022-08-01 08:52:40.327696'),
-(5, 'pbkdf2_sha256$320000$J1gOelBAoQbbW90ty9DzP4$zfKzML+ig8EJfIHiCQcVPaxnMMTJKMqegIQK1XvG8T0=', NULL, 1, 'isaias-07', '', '', 'ih0936742@gmail.com', 1, 1, '2022-08-01 09:15:56.409023');
+(6, 'pbkdf2_sha256$320000$wTEwkXVlBW5SCU2PrIISYP$y+7LsWbA6IlV8LfAUl2OnL+Z3OZZReeM9M09fAIPcws=', '2022-08-01 16:08:50.822530', 1, 'isaias', '', '', 'ih0936742@gmail.com', 1, 1, '2022-08-01 15:44:17.715278'),
+(8, 'pbkdf2_sha256$320000$KmePV5pUJRBhPeXH7bnF2g$I8v6Rz8RAWhAh/dEXInDsbNsdBqtzdn5wFep/Oq43aM=', '2022-08-07 16:45:34.287790', 1, 'isaias28', '', '', 'isaias@gmail.com', 1, 1, '2022-08-07 16:44:43.374354');
 
 -- --------------------------------------------------------
 
@@ -129,6 +172,13 @@ CREATE TABLE `django_admin_log` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `django_admin_log`
+--
+
+INSERT INTO `django_admin_log` (`id`, `action_time`, `object_id`, `object_repr`, `action_flag`, `change_message`, `content_type_id`, `user_id`) VALUES
+(8, '2022-08-01 16:09:07.800844', '2', 'ersdsa', 1, '[{\"added\": {}}]', 6, 6);
+
 -- --------------------------------------------------------
 
 --
@@ -140,6 +190,22 @@ CREATE TABLE `django_content_type` (
   `app_label` varchar(100) NOT NULL,
   `model` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `django_content_type`
+--
+
+INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
+(1, 'admin', 'logentry'),
+(3, 'auth', 'group'),
+(2, 'auth', 'permission'),
+(4, 'auth', 'user'),
+(5, 'contenttypes', 'contenttype'),
+(6, 'registros', 'alumnos'),
+(9, 'registros', 'archivos'),
+(7, 'registros', 'comentario'),
+(8, 'registros', 'comentariocontacto'),
+(10, 'sessions', 'session');
 
 -- --------------------------------------------------------
 
@@ -184,7 +250,27 @@ INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
 (23, 'registros', '0006_comenariocontacto', '2022-08-01 07:40:04.422281'),
 (24, 'registros', '0007_comentariocontacto_delete_comenariocontacto', '2022-08-01 07:40:04.471258'),
 (25, 'registros', '0008_alter_alumnos_id', '2022-08-01 07:40:05.722194'),
-(26, 'registros', '0009_archivos_alter_alumnos_id', '2022-08-01 07:40:05.757460');
+(26, 'registros', '0009_archivos_alter_alumnos_id', '2022-08-01 07:40:05.757460'),
+(27, 'sessions', '0001_initial', '2022-08-01 15:57:09.041613');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `django_session`
+--
+
+CREATE TABLE `django_session` (
+  `session_key` varchar(40) NOT NULL,
+  `session_data` longtext NOT NULL,
+  `expire_date` datetime(6) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `django_session`
+--
+
+INSERT INTO `django_session` (`session_key`, `session_data`, `expire_date`) VALUES
+('h61p8eddgk4kcz38ode1jojp7jz4ghd8', '.eJxVjEEOwiAQRe_C2hCEdhhcuvcMZGCmUjU0Ke3KeHfbpAvdvvf-f6tI61Li2mSOI6uLQnX6ZYnyU-ou-EH1Puk81WUek94TfdimbxPL63q0fweFWtnWXYcopmfr0MmZvTNJSAICcN6Y7Z0fSHxI1uRgYAALWRwKp-QRGNTnC9QRN8I:1oKjPC:_VeSc0J-Da91-D5_XNX-0ecl6uG6Lgc_HsJ3JdoG0yc', '2022-08-21 16:45:34.296253');
 
 -- --------------------------------------------------------
 
@@ -202,6 +288,13 @@ CREATE TABLE `registros_alumnos` (
   `update` datetime(6) NOT NULL,
   `imagen` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `registros_alumnos`
+--
+
+INSERT INTO `registros_alumnos` (`id`, `matricula`, `nombre`, `carrera`, `turno`, `created`, `update`, `imagen`) VALUES
+(2, 'utm15267', 'ersdsa', 'asdsda', 'asdsad', '2022-08-01 16:09:07.776716', '2022-08-01 16:09:07.776716', 'fotos/User_icon_2.svg.png');
 
 -- --------------------------------------------------------
 
@@ -322,6 +415,13 @@ ALTER TABLE `django_migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `django_session`
+--
+ALTER TABLE `django_session`
+  ADD PRIMARY KEY (`session_key`),
+  ADD KEY `django_session_expire_date_a5c62663` (`expire_date`);
+
+--
 -- Indices de la tabla `registros_alumnos`
 --
 ALTER TABLE `registros_alumnos`
@@ -366,13 +466,13 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT de la tabla `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT de la tabla `auth_user`
 --
 ALTER TABLE `auth_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `auth_user_groups`
@@ -390,25 +490,25 @@ ALTER TABLE `auth_user_user_permissions`
 -- AUTO_INCREMENT de la tabla `django_admin_log`
 --
 ALTER TABLE `django_admin_log`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT de la tabla `registros_alumnos`
 --
 ALTER TABLE `registros_alumnos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `registros_archivos`
